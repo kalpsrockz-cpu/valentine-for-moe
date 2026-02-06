@@ -33,10 +33,10 @@
       margin-bottom: 10px;
     }
 
-    .photo {
+    .gif {
       width: 100%;
       border-radius: 15px;
-      margin-bottom: 15px;
+      margin: 15px 0;
     }
 
     p {
@@ -58,23 +58,13 @@
     }
 
     @keyframes float {
-      0% {
-        transform: translateY(100vh);
-      }
-      100% {
-        transform: translateY(-10vh);
-      }
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-10vh); }
     }
 
     @keyframes explode {
-      0% {
-        transform: scale(0.3);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1.5);
-        opacity: 0;
-      }
+      0% { transform: scale(0.3); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
     }
   </style>
 </head>
@@ -82,8 +72,8 @@
   <div class="card">
     <h1>She said YES! 🎉💖</h1>
 
-    <!-- SAME IMAGE AGAIN -->
-    <img src="photo.jpg.png" alt="Kalpesh & Shivani" class="photo" />
+    <!-- FUNNY CELEBRATION GIF -->
+    <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Celebration" class="gif" />
 
     <p><strong>Kalpesh & Shivani</strong></p>
     <p>
@@ -93,9 +83,9 @@
     </p>
   </div>
 
-  <!-- Romantic Hindi song (YouTube embed fallback-free option coming if needed) -->
+  <!-- BACKGROUND MUSIC -->
   <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2022/10/26/audio_1c9b2a8b84.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/audio/2023/02/08/audio_7f7f8e7c5a.mp3" type="audio/mpeg">
   </audio>
 
   <script>
@@ -106,10 +96,7 @@
       heart.style.left = Math.random() * 100 + "vw";
       heart.style.animationDuration = 4 + Math.random() * 4 + "s";
       document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
+      setTimeout(() => heart.remove(), 8000);
     }
 
     function createFirework() {
@@ -119,10 +106,7 @@
       firework.style.left = Math.random() * 100 + "vw";
       firework.style.top = Math.random() * 100 + "vh";
       document.body.appendChild(firework);
-
-      setTimeout(() => {
-        firework.remove();
-      }, 1500);
+      setTimeout(() => firework.remove(), 1500);
     }
 
     setInterval(createHeart, 300);
