@@ -86,7 +86,6 @@
   <div class="card">
     <h1>Shivani Chaurasia,<br>will you be my Valentine? 💖</h1>
 
-    <!-- YOUR IMAGE -->
     <img src="photo.jpg.png" alt="Kalpesh & Shivani" class="photo" />
 
     <div class="buttons">
@@ -110,13 +109,11 @@
       const card = document.querySelector(".card");
       const cardRect = card.getBoundingClientRect();
       const btnWidth = noBtn.offsetWidth;
-      const btnHeight = noBtn.offsetHeight;
 
       const maxX = cardRect.width - btnWidth - 20;
-      const maxY = cardRect.height - btnHeight - 20;
-
       const randomX = Math.random() * maxX;
-      const randomY = Math.random() * maxY;
+
+      const randomY = Math.random() * 30; // stays near the top
 
       noBtn.style.left = `${randomX}px`;
       noBtn.style.top = `${randomY}px`;
