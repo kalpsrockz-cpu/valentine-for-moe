@@ -69,10 +69,9 @@
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="card" id="card">
     <h1>She said YES! 🎉💖</h1>
 
-    <!-- FUNNY CELEBRATION GIF -->
     <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Celebration" class="gif" />
 
     <p><strong>Kalpesh & Shivani</strong></p>
@@ -81,14 +80,22 @@
       You just made me the happiest person alive! 😍<br />
       Happy Valentine’s Day! 💖
     </p>
+
+    <p style="font-size: 14px; color: #888;">🔊 Tap anywhere to start music</p>
   </div>
 
-  <!-- BACKGROUND MUSIC -->
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="https://cdn.pixabay.com/audio/2023/02/08/audio_7f7f8e7c5a.mp3" type="audio/mpeg">
   </audio>
 
   <script>
+    const music = document.getElementById("bgMusic");
+    const card = document.getElementById("card");
+
+    card.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+
     function createHeart() {
       const heart = document.createElement("div");
       heart.className = "heart";
