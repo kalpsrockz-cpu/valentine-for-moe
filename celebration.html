@@ -48,13 +48,13 @@
       position: fixed;
       font-size: 22px;
       animation: float 5s linear infinite;
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     .firework {
       position: fixed;
-      font-size: 24px;
-      animation: explode 1.5s ease-out infinite;
+      font-size: 26px;
+      animation: explode 1.2s ease-out infinite;
     }
 
     @keyframes float {
@@ -63,8 +63,8 @@
     }
 
     @keyframes explode {
-      0% { transform: scale(0.3); opacity: 1; }
-      100% { transform: scale(1.5); opacity: 0; }
+      0% { transform: scale(0.4); opacity: 1; }
+      100% { transform: scale(1.8); opacity: 0; }
     }
   </style>
 </head>
@@ -72,7 +72,8 @@
   <div class="card" id="card">
     <h1>She said YES! 🎉💖</h1>
 
-    <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="Celebration" class="gif" />
+    <!-- CARTOONY CELEBRATION GIF -->
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Celebration" class="gif" />
 
     <p><strong>Kalpesh & Shivani</strong></p>
     <p>
@@ -101,9 +102,9 @@
       heart.className = "heart";
       heart.textContent = "💖";
       heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+      heart.style.animationDuration = 3 + Math.random() * 3 + "s";
       document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 8000);
+      setTimeout(() => heart.remove(), 7000);
     }
 
     function createFirework() {
@@ -113,11 +114,12 @@
       firework.style.left = Math.random() * 100 + "vw";
       firework.style.top = Math.random() * 100 + "vh";
       document.body.appendChild(firework);
-      setTimeout(() => firework.remove(), 1500);
+      setTimeout(() => firework.remove(), 1200);
     }
 
-    setInterval(createHeart, 300);
-    setInterval(createFirework, 700);
+    // MORE FIREWORKS + HEARTS
+    setInterval(createHeart, 200);
+    setInterval(createFirework, 300);
   </script>
 </body>
 </html>
